@@ -7,9 +7,12 @@ import { StyledDashboardForm } from './style';
 const DashboardForm = () => {
   return (
     <StyledDashboardForm>
-            <ThemeTitle tag='h2' titleSize='title3'>Insira uma anotação</ThemeTitle>
 
+          <div className="content">
+            <ThemeTitle tag='h2' titleSize='title3'>Insira uma anotação</ThemeTitle>
             <ThemeParagraph>Preencha os campos abaixo para adicionar a nota</ThemeParagraph>
+          </div>
+
         <form>
             <ThemeInputLabel htmlFor='titulo'>Título</ThemeInputLabel>
             <ThemeInput name='titulo'/>

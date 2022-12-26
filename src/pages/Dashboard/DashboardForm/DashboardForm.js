@@ -2,12 +2,13 @@ import React from 'react'
 import { ThemeButton } from '../../../styles/buttons';
 import { ThemeArea, ThemeInput, ThemeInputLabel } from '../../../styles/form';
 import {  ThemeParagraph, ThemeTitle } from "../../../styles/typography";
+import { StyledDashboardForm } from './style';
 
 const DashboardForm = () => {
   return (
-    <div>
+    <StyledDashboardForm>
             <ThemeTitle tag='h2' titleSize='title3'>Insira uma anotação</ThemeTitle>
-            
+
             <ThemeParagraph>Preencha os campos abaixo para adicionar a nota</ThemeParagraph>
         <form>
             <ThemeInputLabel htmlFor='titulo'>Título</ThemeInputLabel>
@@ -18,7 +19,7 @@ const DashboardForm = () => {
 
             <ThemeButton buttonSize='lg' buttonStyle='solid'>Enviar</ThemeButton>
         </form>
-    </div>
+    </StyledDashboardForm>
   )
 }
 

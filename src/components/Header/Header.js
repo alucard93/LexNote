@@ -4,12 +4,12 @@ import { ThemeButton } from "../../styles/buttons";
 import { StyledHeader } from "./style";
 import { Container } from "../../styles/Global";
 
-const Header = () => {
+const Header = ({ setLogin }) => {
   return (
     <StyledHeader>
       <Container>
         <img src={LexNote} alt="lexnote logo" />
-        <ThemeButton buttonSize="sm" buttonStyle="outline">
+        <ThemeButton onClick={() => setLogin(false)} buttonSize="sm" buttonStyle="outline">
           Sair
         </ThemeButton>
       </Container>

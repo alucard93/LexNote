@@ -3,17 +3,18 @@ import Header from "../../components/Header/Header";
 import { Container } from "../../styles/Global";
 import DashboardForm from "./DashboardForm/DashboardForm";
 import NoteList from "./Notelist";
+import { StyledMain } from "./style";
 
 
-const Dashboard = () => {
+const Dashboard = ({ setLogin, addNotes, removeNotes }) => {
   return (
     <div>
-        <Header />
+        <Header setLogin={setLogin}/>
         <Container>
-          <main>
+          <StyledMain>
             <DashboardForm/>
-            <NoteList/>
-          </main>
+            <NoteList addNotes={addNotes} removeNotes={removeNotes} />
+          </StyledMain>
         </Container>
     </div>
   );

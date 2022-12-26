@@ -11,7 +11,7 @@ const NoteCard = ({ title, text }) => {
                 <MdDelete size={21} color='var(--White)'/>
             </button>
             <ThemeTitle tag='h3' titleSize='title3'>Título da anotação</ThemeTitle>
-            <ThemeParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptas, aut molestias excepturi minus quis sit ratione at quod nam laudantium consequatur consectetur? Quas perspiciatis perferendis voluptas aspernatur nam atque.</ThemeParagraph>
+            <ThemeParagraph opacity='.9'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptas, aut molestias excepturi minus quis sit ratione at quod nam laudantium consequatur consectetur? Quas perspiciatis perferendis voluptas aspernatur nam atque.</ThemeParagraph>
         </StyledNoteCard>
     </div>
   )

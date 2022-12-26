@@ -47,6 +47,7 @@ export const ThemeParagraph = styled.p`
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.4;
     color: var(--White);
     opacity: ${props => props.opacity};
 

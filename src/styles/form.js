@@ -10,19 +10,30 @@ export const ThemeInput = styled.input`
     padding: 0 1rem;
     height: 52px;
 
-    background: var(--Gray);
+    background: var(--Black2);
     border: 1px solid var(--White);
+    &:focus, &:active{
+        outline: none;
+        border-color: var(--Blue);
+    }
     `
 
 export const ThemeArea = styled.textarea`
     padding: 1rem;
     width: 100%;
+
     min-width: 100%;
     max-width: 100%;
-    min-height: 200px;
+
+    min-height: 140px;
     max-height: 300px;
-    background: var(--Gray);
+
+    background: var(--Black2);
     border: 1px solid var(--White);
+    &:focus, &:active{
+        outline: none;
+        border-color: var(--Blue);
+    }
     `;
 
 export const ThemeInputLabel = styled.label`

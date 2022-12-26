@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import { Container } from "../../styles/Global";
 import DashboardForm from "./DashboardForm/DashboardForm";
+import NoteList from "./Notelist";
 
 
 const Dashboard = () => {
@@ -11,6 +12,7 @@ const Dashboard = () => {
         <Container>
           <main>
             <DashboardForm/>
+            <NoteList/>
           </main>
         </Container>
     </div>

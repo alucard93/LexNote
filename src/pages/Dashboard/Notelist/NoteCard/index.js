@@ -7,7 +7,7 @@ const NoteCard = ({ title, text }) => {
   return (
     <div>
         <StyledNoteCard>
-            <button>
+            <button className='remove' aria-label='remove'>
                 <MdDelete size={21} color='var(--White)'/>
             </button>
             <ThemeTitle tag='h3' titleSize='title3'>Título da anotação</ThemeTitle>

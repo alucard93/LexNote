@@ -22,12 +22,16 @@ export const ThemeInput = styled.input`
 export const ThemeArea = styled.textarea`
     padding: 1rem;
     width: 100%;
+    
     min-width: 100%;
     max-width: 100%;
-    min-height: 200px;
-    max-height: 300px;
+
+    min-height: 140px;
+    max-height: 200px;
+    
     background: var(--Black2);
     border: 1px solid var(--White);
+
     &:focus, 
     &:active{
         outline: none;

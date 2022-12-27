@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
     ul, ol, li{
         list-style: none;
+        
     }
 
     img {
@@ -43,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-    max-width: 1300px;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
     padding: 1.5rem 1rem;

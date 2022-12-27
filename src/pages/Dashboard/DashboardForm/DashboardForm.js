@@ -4,7 +4,7 @@ import { ThemeArea, ThemeInput, ThemeInputLabel } from '../../../styles/form';
 import {  ThemeParagraph, ThemeTitle } from "../../../styles/typography";
 import { StyledDashboardForm } from './style';
 
-const DashboardForm = () => {
+const DashboardForm = ({addNotes, title, setTitle, text, setText }) => {
   return (
     <StyledDashboardForm>
 
@@ -13,12 +13,25 @@ const DashboardForm = () => {
             <ThemeParagraph>Preencha os campos abaixo para adicionar a nota</ThemeParagraph>
           </div>
 
-        <form>
-            <ThemeInputLabel htmlFor='titulo'>Título</ThemeInputLabel>
-            <ThemeInput name='titulo'/>
+        <form onSubmit={addNotes}>
+          
+            <ThemeInputLabel htmlFor='title'>Título</ThemeInputLabel>
+            <ThemeInput 
+              name='title'
+              type='text'
+              value={title}
+              maxLength={28}              
+              onChange={e => setTitle(e.target.value )}
+              />
 
-            <ThemeInputLabel htmlFor='mensagem'>Mensagem</ThemeInputLabel>
-            <ThemeArea name='mensagem'/>
+            <ThemeInputLabel htmlFor='text'>Mensagem</ThemeInputLabel>
+            <ThemeArea 
+              name='text'
+              type='text'
+              value={text}
+              maxLength={800}               
+              onChange={e => setText(e.target.value)}
+            />
 
             <ThemeButton buttonSize='lg' buttonStyle='solid'>Enviar</ThemeButton>
         </form>

@@ -12,6 +12,7 @@ export const ThemeInput = styled.input`
 
     background: var(--Black2);
     border: 1px solid var(--White);
+    color: var(--White);
     &:focus, 
     &:active{
         outline: none;
@@ -31,11 +32,26 @@ export const ThemeArea = styled.textarea`
     
     background: var(--Black2);
     border: 1px solid var(--White);
+    color: var(--White);
 
     &:focus, 
     &:active{
         outline: none;
         border-color: var(--Blue);
+    }
+    &::-webkit-scrollbar{
+        width: 12px;
+        
+    }
+    &::-webkit-scrollbar-track {
+    background: var(--Blue);
+    }
+
+    &::-webkit-scrollbar-thumb {
+    background-color: white;    
+    border-radius: 20px;
+    border: 3px solid white;
+   
     }
     `;
 

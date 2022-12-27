@@ -49,6 +49,7 @@ export const ThemeParagraph = styled.p`
     font-size: 16px;
     line-height: 1.4;
     color: var(--White);
+    word-break: break-word;
     opacity: ${props => props.opacity};
 
 `;

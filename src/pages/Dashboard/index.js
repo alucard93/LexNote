@@ -6,14 +6,24 @@ import NoteList from "./Notelist";
 import { StyledMain } from "./style";
 
 
-const Dashboard = ({ setLogin, addNotes, removeNotes }) => {
+const Dashboard = ({ setLogin, addNotes, removeNotes, notes, setTitle, title, setText, text }) => {
   return (
     <div>
         <Header setLogin={setLogin}/>
         <Container>
           <StyledMain>
-            <DashboardForm/>
-            <NoteList addNotes={addNotes} removeNotes={removeNotes} />
+            <DashboardForm
+              addNotes={addNotes}
+              title={title}
+              setTitle={setTitle}
+              text={text}
+              setText={setText}
+            />
+            <NoteList 
+              addNotes={addNotes} 
+              removeNotes={removeNotes} 
+              notes={notes}
+              />
           </StyledMain>
         </Container>
     </div>

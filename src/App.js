@@ -7,28 +7,34 @@ import Login from './pages/Login/Login';
 
 function App() {
   const [login, setLogin] = useState(false)
-  // const [notes, setNotes] = useState([])
-  // const [counter, setCounter] = useState(0)
+  const [notes, setNotes] = useState([])
+  const [title, setTitle] = useState('');
+  const [text, setText] = useState('');
 
-  // function addNotes(note) {
-  //   const newNote = {
-  //       id: counter,
-  //       title: note.title,
-  //       text: note.text,
-  //   }
-  //   setNotes([...notes, newNote]);
-  //   setCounter(counter +1);
-  // }
+  function addNotes(e) {
+    e.preventDefault() 
+      const noteNew = { title, text }
+      setNotes([...notes, noteNew])
+  }
 
-  // function removeNotes(id) {
-  //   const newNoteList = notes.filter((note) => note.id !== id)
-  //   setNotes(newNoteList)
-  // }
+  function removeNotes(notesTarget) {
+    const newNoteList = notes.filter((note) => note !== notesTarget)
+    setNotes(newNoteList)
+  }
 
   return (
     <div className="App">
       {login ? 
-        (<Dashboard setLogin={setLogin}/>)
+        (<Dashboard 
+            setLogin={setLogin} 
+            addNotes={addNotes}
+            title={title}
+            setTitle={setTitle}
+            text={text}
+            setText={setText}
+            removeNotes={removeNotes}
+            notes={notes}
+            />)
         :
         (<Login setLogin={setLogin}/>)}
       
